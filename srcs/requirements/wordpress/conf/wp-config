@@ -1,0 +1,24 @@
+<?php
+define( 'DB_NAME', getenv('MARIADB_DB'));
+define( 'DB_USER', getenv('MARIADB_USER'));
+define( 'DB_PASSWORD', getenv('MARIADB_USER_PWD'));
+define(	'DB_HOST', getenv('MARIADB_HOST'));
+define( 'DB_CHARSET', 'utf8');
+define( 'DB_COLLATE', '');
+
+define( 'AUTH_KEY', 'puny_goblin_9');
+define( 'SECURE_AUTH_KEY', 'merry_bugbear_1');
+define( 'LOGGED_IN_KEY', 'cheery_hobgoblin_8');
+define( 'NONCE_KEY', 'varied_kobold_2');
+define( 'AUTH_SALT', 'tyrant_gnome_7');
+define( 'SECURE_AUTH_SALT', 'funny_halfing_6');
+define( 'LOGGED_IN_SALT', 'shrewd_dwarf_3');
+define( 'NONCE_SALT', 'hardy_changeling_5');
+$table_prefix = 'wp_';
+define( 'WP_DEBUG', false);
+
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/' );
+}
+
+require_once ABSPATH . 'wp-settings.php';
