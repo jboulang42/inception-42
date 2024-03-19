@@ -22,7 +22,7 @@ services:
   nginx:
     container_name: nginx
     build:
-      context: ./nginx
+      context: ./requirements/nginx
     image: img_nginx
     volumes:
       - wordpress-volume:/var/www/wordpress
@@ -37,7 +37,7 @@ services:
   mariadb:
     container_name: mariadb
     build:
-      context: ./mariadb
+      context: ./requirements/mariadb
     image: img_mariadb
     volumes:
       - mariadb-volume:/var/lib/mysql
@@ -54,7 +54,7 @@ services:
     depends_on:
       - mariadb
     build: 
-      context: ./wordpress
+      context: ./requirements/wordpress
     image: img_wordpress
     volumes:
       - wordpress-volume:/var/www/wordpress
