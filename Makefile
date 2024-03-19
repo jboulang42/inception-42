@@ -16,7 +16,7 @@ execwordpress:
 	docker exec -it wordpress /bin/bash
 
 down:
-	docker-compose -f ./srcs/docker-compose.yml down
+	docker compose -f ./srcs/docker-compose.yml down
 	docker system prune -af --volumes
 	docker network prune -f
 	docker volume prune -f
