@@ -20,8 +20,8 @@ down:
 	docker system prune -af --volumes
 	docker network prune -f
 	docker volume prune -f
-	docker volume rm srcs_mariadb -f
-	docker volume rm srcs_wordpress -f
+	docker volume rm srcs_mariadb-volume -f
+	docker volume rm srcs_wordpress-volume -f
 	rm -rf /home/justineb/data
 
 re: down build
